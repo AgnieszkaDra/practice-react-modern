@@ -1,13 +1,14 @@
 // ./src/components/Div.js
 import React from 'react';
 import PropTypes from 'prop-types';
+import TextContext from '../context';
 
 const Div = props => {
-    const { title } = props;
+    const text = React.useContext(TextContext)
 
     return (
         <div>
-            <h1>{title}</h1>
+             <h1>{text}</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia, justo et posuere viverra,
                 ligula turpis egestas nisi, id iaculis augue ex non nisi. Class aptent taciti sociosqu ad litora
